@@ -41,7 +41,8 @@ export default function Home() {
     const fetchRiskData = async (lat: number, lng: number) => {
         setLoading(true);
         try {
-            const response = await fetch(`http://localhost:8000/api/exposome-risk?lat=${lat}&lng=${lng}`);
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://exposomeradar.onrender.com";
+            const response = await fetch(`${apiUrl}/api/exposome-risk?lat=${lat}&lng=${lng}`);
             const data = await response.json();
             // Artificial delay for better UX scanning effect in mockup
             setTimeout(() => {

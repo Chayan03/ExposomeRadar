@@ -52,7 +52,8 @@ export default function Home() {
   const fetchRiskData = async (lat: number, lng: number, profile: string, ej: boolean) => {
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:8000/api/exposome-risk?lat=${lat}&lng=${lng}&patient_profile=${profile}&is_ej_mode=${ej}`);
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://exposomeradar.onrender.com";
+      const response = await fetch(`${apiUrl}/api/exposome-risk?lat=${lat}&lng=${lng}&patient_profile=${profile}&is_ej_mode=${ej}`);
       const data = await response.json();
       setTimeout(() => {
         setRiskData(data);
