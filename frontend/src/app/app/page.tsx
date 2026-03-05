@@ -4,11 +4,29 @@ import React, { useState, useEffect } from "react";
 import ExposomeMap from "@/components/ExposomeMap";
 import RiskPanel from "@/components/RiskPanel";
 
+interface ActionPlanItem {
+    title: string;
+    description: string;
+    action_text: string;
+    action_type: string;
+    link: string;
+}
+
+interface TrendData {
+    year: string;
+    radon: number;
+    pm25: number;
+    metals: number;
+}
+
 interface RiskData {
     radon_level: number;
     pm25_level: number;
     heavy_metals_level: number;
     alerts: string[];
+    historical_trends: TrendData[];
+    action_plan: ActionPlanItem[];
+    regional_stats: string;
 }
 
 export default function Home() {
