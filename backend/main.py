@@ -116,7 +116,7 @@ def get_exposome_risk(
                 link="https://www.epa.gov/radon/find-radon-test-kit-or-measurement-and-mitigation-professional" if not is_ej_mode else "https://www.epa.gov/radon/state-indoor-radon-grant-sirg-program"
             ))
         else:
-            alerts.append("Radon levels elevated. General risk increased." if not is_ej_mode else "EJ ALERT: Tenant exposed to elevated radon. Landlord mitigation required.")
+            alerts.append("SERS ALERT: Tenant exposed to elevated radon. Landlord mitigation required.")
             action_plan.append(ActionPlanItem(
                 title="Home Radon Testing" if not is_ej_mode else "Free Tenant Rights Legal Consultation",
                 description="Long term exposure to elevated Radon gas is the second leading cause of lung cancer. Verify indoor levels immediately." if not is_ej_mode else "Landlords in your county are legally required to provide a habitable environment. If radon exceeds 4.0 pCi/L, you have grounds for legal intervention.",
@@ -129,7 +129,7 @@ def get_exposome_risk(
         
     if pm25 > 80.0:
         if patient_profile == "egfr":
-            alerts.append("CRITICAL: High PM2.5 exacerbates oxidative stress, accelerating lung mutations for EGFR+ patients." if not is_ej_mode else "EJ CRITICAL: Unlawful zoning of heavy industry near residential areas has created a targeted PM2.5 hazard for vulnerable populations.")
+            alerts.append("CRITICAL: High PM2.5 exacerbates oxidative stress, accelerating lung mutations for EGFR+ patients." if not is_ej_mode else "SERS CRITICAL: Unlawful zoning of heavy industry near residential areas has created a targeted PM2.5 hazard for vulnerable populations.")
             action_plan.append(ActionPlanItem(
                 title="Monitor Inflammatory Biomarkers" if not is_ej_mode else "Locate Subsidized Pulmonology Clinic",
                 description="EGFR mutations thrive in high-inflammation environments caused by PM2.5 particulate inhalation. Tracking hs-CRP and localized cytokines allows for early intervention." if not is_ej_mode else "Specialized care is available through Federally Qualified Health Centers (FQHC). You can receive comprehensive pulmonology care on a sliding income scale.",
@@ -145,10 +145,10 @@ def get_exposome_risk(
                 link="https://www.epa.gov/indoor-air-quality-iaq/air-cleaners-and-air-filters-home" if not is_ej_mode else "https://www.acf.hhs.gov/ocs/programs/liheap"
             ))
         else:
-            alerts.append("PM2.5 above safe limits." if not is_ej_mode else "EJ ALERT: Red-lined community boundary intersecting with industrial PM2.5 emissions.")
+            alerts.append("PM2.5 above safe limits." if not is_ej_mode else "SERS ALERT: Red-lined community boundary intersecting with industrial PM2.5 emissions.")
             action_plan.append(ActionPlanItem(
                 title="Limit Outdoor Exposure" if not is_ej_mode else "File EPA Title VI Civil Rights Complaint",
-                description="Current pollution levels can cause respiratory irritation and long-term cardiovascular stress." if not is_ej_mode else "Disproportionate pollution is a civil rights violation under Title VI of the Civil Rights Act. Your neighborhood has standing to file an EJ complaint.",
+                description="Current pollution levels can cause respiratory irritation and long-term cardiovascular stress." if not is_ej_mode else "Disproportionate pollution is a civil rights violation under Title VI of the Civil Rights Act. Your neighborhood has standing to file an SERS complaint.",
                 action_text="View Local Air Quality Map" if not is_ej_mode else "View Complaint Process",
                 action_type="preventative",
                 link="https://www.airnow.gov/" if not is_ej_mode else "https://www.epa.gov/environmentaljustice/title-vi-and-environmental-justice"
@@ -158,7 +158,7 @@ def get_exposome_risk(
         
     if lead > 25.0:
         if patient_profile == "brca1":
-            alerts.append("CRITICAL: Heavy Metal (Lead) detected. Strongly inhibits DNA repair mechanisms essential for BRCA1/2 carriers." if not is_ej_mode else "EJ CRITICAL: Historic municipal neglect has exposed BRCA1+ residents to DNA-inhibiting heavy metals. Immediate crisis intervention required.")
+            alerts.append("CRITICAL: Heavy Metal (Lead) detected. Strongly inhibits DNA repair mechanisms essential for BRCA1/2 carriers." if not is_ej_mode else "SERS CRITICAL: Historic municipal neglect has exposed BRCA1+ residents to DNA-inhibiting heavy metals. Immediate crisis intervention required.")
             action_plan.append(ActionPlanItem(
                 title="Heavy Metal Blood Toxicity Panel" if not is_ej_mode else "Free Municipal Heavy Metal Panel",
                 description="As a BRCA1 carrier, your genome relies heavily on alternative DNA repair pathways. Lead toxicity directly inhibits these backup pathways, exponentially increasing mutation risk." if not is_ej_mode else "Under environmental crisis provisions, local health departments must provide free venous blood lead testing for residents in documented toxic zones.",
@@ -168,13 +168,13 @@ def get_exposome_risk(
             ))
             action_plan.append(ActionPlanItem(
                 title="Evaluate Chelation Therapy" if not is_ej_mode else "Join Medical Class Action Lawsuit",
-                description="If systemic lead levels are confirmed high, targeted chelation therapy combined with PARP inhibitors may be necessary to process out the toxins and restore genetic stability." if not is_ej_mode else "Given your BRCA1 status and the documented municipal negligence, you qualify as an injured party. Connect with EJ attorneys specializing in toxic torts.",
+                description="If systemic lead levels are confirmed high, targeted chelation therapy combined with PARP inhibitors may be necessary to process out the toxins and restore genetic stability." if not is_ej_mode else "Given your BRCA1 status and the documented municipal negligence, you qualify as an injured party. Connect with SERS attorneys specializing in toxic torts.",
                 action_text="Connect with Oncologist" if not is_ej_mode else "Submit Details to Law Firm",
                 action_type="therapeutic",
                 link="https://www.cancer.org/treatment/treatments-and-side-effects/treatment-types/targeted-therapy.html" if not is_ej_mode else "https://www.earthjustice.org/"
             ))
         else:
-            alerts.append("Elevated environmental Heavy Metals detected." if not is_ej_mode else "EJ ALERT: Unsafe heavy metals detected in zip code. Historical infrastructure neglect.")
+            alerts.append("Elevated environmental Heavy Metals detected." if not is_ej_mode else "SERS ALERT: Unsafe heavy metals detected in zip code. Historical infrastructure neglect.")
             action_plan.append(ActionPlanItem(
                 title="Water & Soil Testing" if not is_ej_mode else "Request Emergency Municipal Filtration",
                 description="Elevated regional heavy metals pose long-term neurological and systemic risks. Recommend immediate point-of-use water filtration and soil testing before local agriculture." if not is_ej_mode else "Low-income households are eligible to receive free reverse osmosis point-of-use filtration systems directly installed by municipal water authorities.",
