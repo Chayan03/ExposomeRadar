@@ -76,6 +76,9 @@ const RiskPanel: React.FC<RiskPanelProps> = ({ loading, data }) => {
                 <Activity className="w-12 h-12 text-cyan-400 mb-4 animate-spin-slow" />
                 <h3 className="text-xl font-bold text-slate-300">Scanning Exposome Profile...</h3>
                 <p className="text-slate-500 text-sm mt-2">Cross-referencing geographic multi-omics data.</p>
+                <p className="text-amber-500/80 text-xs mt-6 font-medium bg-amber-950/30 px-3 py-2 rounded-md border border-amber-900/50">
+                    Note: Please wait ~2 minutes for the initial backend connection to establish (server cold start).
+                </p>
             </div>
         );
     }

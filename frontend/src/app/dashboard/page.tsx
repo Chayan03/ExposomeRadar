@@ -103,7 +103,7 @@ export default function Home() {
               onClick={() => setIsEjMode(!isEjMode)}
             >
               <div>
-                <div className={`text-xs font-bold uppercase tracking-wider mb-0.5 ${isEjMode ? 'text-indigo-400' : 'text-slate-400'}`}>Environmental Justice (EJ)</div>
+                <div className={`text-xs font-bold uppercase tracking-wider mb-0.5 ${isEjMode ? 'text-indigo-400' : 'text-slate-400'}`}>Socio-Economic Risk Stratification (SERS)</div>
                 <div className="text-[10px] text-slate-500">Socio-economic policy mode</div>
               </div>
               <div className={`w-10 h-5 rounded-full relative transition-colors ${isEjMode ? 'bg-indigo-500' : 'bg-slate-700'}`}>

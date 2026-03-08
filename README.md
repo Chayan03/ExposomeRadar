@@ -31,10 +31,10 @@ For example:
 ### 🩺 Automated Clinical Action Plans
 The platform translates this complex, multi-omics data into simple, actionable Clinical Action Plans. It recommends specific tests (like Heavy Metal Toxicity Panels or Low-Dose CT scans) and immediate preventative measures based on the EPA's thresholds.
 
-### ⚖️ Environmental Justice (EJ) Mode
-Healthcare is socio-economic. By activating the **Environmental Justice (EJ)** toggle, the platform shifts its Action Plans to acknowledge systemic realities (such as redlining or industrial zoning near vulnerable communities). 
+### ⚖️ Socio-Economic Risk Stratification (SERS) Mode
+Healthcare is socio-economic. By activating the **Socio-Economic Risk Stratification (SERS)** toggle, the platform shifts its Action Plans to acknowledge systemic realities (such as redlining or industrial zoning near vulnerable communities). 
 
-Instead of recommending expensive, out-of-pocket mitigations, EJ Mode dynamically recalibrates to offer:
+Instead of recommending expensive, out-of-pocket mitigations, SERS Mode dynamically recalibrates to offer:
 - 🏛️ Subsidized municipal and state clinics
 - 💵 Federal grant links for radon mitigation or HEPA filtration
 - ⚖️ Connects users to Free Legal Aid for tenant or civil rights violations
